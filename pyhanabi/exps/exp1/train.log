@@ -1,0 +1,123 @@
+FEATURE SIZE:  838
+*****loading pretrained model*****
+CFG:  {'act_base_eps': 0.4, 'act_device': 'cuda:1', 'act_eps_alpha': 7.0, 'actor_sync_freq': 10, 'batchsize': 128, 'burn_in_frames': 2500, 'epoch_len': 1000, 'eps': 1e-09, 'eta': 0.9, 'eval_bomb': 0, 'eval_epochs': 1, 'eval_log_betas': '1,2,3,5,7,10', 'gamma': 0.99, 'grad_clip': 50, 'hand_size': 5, 'load_model': '', 'log_beta_range': '0.5,10', 'lr': 0.0001, 'max_len': 80, 'method': 'vdn', 'multi_step': 3, 'num_epoch': 5000, 'num_eps': 80, 'num_game_per_thread': 80, 'num_lstm_layer': 2, 'num_player': 2, 'num_thread': 15, 'num_update_between_sync': 2500, 'obs_n_most_recent_own_cards': 0, 'pred_weight': 0, 'prefetch': 3, 'priority_exponent': 0.6, 'priority_weight': 0.4, 'q_variant': 'doubleq', 'replay_buffer_size': 5000, 'rnn_hid_dim': 512, 'sad': 1, 'save_dir': 'exps/exp1', 'seed': 9, 'shuffle_color': 1, 'shuffle_obs': 0, 'train_bomb': 0, 'train_device': 'cuda', 'use_softmax_policy': 0}
+*****done*****
+*****loading pretrained model*****
+*****done*****
+ActGroup created
+Finished creating 15 threads with 300 games and 15 actors
+warming up replay buffer: 0
+warming up replay buffer: 44
+warming up replay buffer: 610
+warming up replay buffer: 723
+Success, Done
+=======================
+*****loading pretrained model*****
+CFG:  {'act_base_eps': 0.4, 'act_device': 'cuda:1', 'act_eps_alpha': 7.0, 'actor_sync_freq': 10, 'batchsize': 128, 'burn_in_frames': 2500, 'epoch_len': 1000, 'eps': 1e-09, 'eta': 0.9, 'eval_bomb': 0, 'eval_epochs': 1, 'eval_log_betas': '1,2,3,5,7,10', 'gamma': 0.99, 'grad_clip': 50, 'hand_size': 5, 'load_model': '', 'log_beta_range': '0.5,10', 'lr': 0.0001, 'max_len': 80, 'method': 'vdn', 'multi_step': 3, 'num_epoch': 5000, 'num_eps': 80, 'num_game_per_thread': 80, 'num_lstm_layer': 2, 'num_player': 2, 'num_thread': 15, 'num_update_between_sync': 2500, 'obs_n_most_recent_own_cards': 0, 'pred_weight': 0, 'prefetch': 3, 'priority_exponent': 0.6, 'priority_weight': 0.4, 'q_variant': 'doubleq', 'replay_buffer_size': 5000, 'rnn_hid_dim': 512, 'sad': 1, 'save_dir': 'exps/exp1', 'seed': 9, 'shuffle_color': 1, 'shuffle_obs': 0, 'train_bomb': 0, 'train_device': 'cuda', 'use_softmax_policy': 0}
+*****done*****
+Num batches: 3
+Num batches: 4
+Num batches: 5
+Num batches: 6
+Num batches: 7
+Num batches: 8
+Num batches: 9
+Num batches: 10
+Num batches: 11
+Num batches: 12
+Num batches: 13
+Num batches: 14
+Num batches: 15
+Num batches: 16
+Num batches: 17
+Num batches: 18
+Num batches: 19
+Num batches: 20
+Num batches: 21
+Num batches: 22
+Num batches: 23
+Num batches: 24
+Num batches: 25
+Num batches: 26
+Num batches: 27
+Num batches: 28
+Num batches: 29
+Num batches: 30
+Num batches: 31
+Num batches: 32
+Num batches: 33
+Num batches: 34
+Num batches: 35
+Num batches: 36
+Num batches: 37
+Num batches: 38
+Num batches: 39
+Num batches: 40
+Num batches: 41
+Num batches: 42
+Num batches: 43
+Num batches: 44
+Num batches: 45
+Num batches: 46
+Num batches: 47
+Num batches: 48
+Num batches: 49
+Num batches: 50
+Num batches: 51
+Num batches: 52
+*****loading pretrained model*****
+CFG:  {'act_base_eps': 0.4, 'act_device': 'cuda:1', 'act_eps_alpha': 7.0, 'actor_sync_freq': 10, 'batchsize': 128, 'burn_in_frames': 2500, 'epoch_len': 1000, 'eps': 1e-09, 'eta': 0.9, 'eval_bomb': 0, 'eval_epochs': 1, 'eval_log_betas': '1,2,3,5,7,10', 'gamma': 0.99, 'grad_clip': 50, 'hand_size': 5, 'load_model': '', 'log_beta_range': '0.5,10', 'lr': 0.0001, 'max_len': 80, 'method': 'vdn', 'multi_step': 3, 'num_epoch': 5000, 'num_eps': 80, 'num_game_per_thread': 80, 'num_lstm_layer': 2, 'num_player': 2, 'num_thread': 15, 'num_update_between_sync': 2500, 'obs_n_most_recent_own_cards': 0, 'pred_weight': 0, 'prefetch': 3, 'priority_exponent': 0.6, 'priority_weight': 0.4, 'q_variant': 'doubleq', 'replay_buffer_size': 5000, 'rnn_hid_dim': 512, 'sad': 1, 'save_dir': 'exps/exp1', 'seed': 9, 'shuffle_color': 1, 'shuffle_obs': 0, 'train_bomb': 0, 'train_device': 'cuda', 'use_softmax_policy': 0}
+*****done*****
+Num batches: 53
+Num batches: 54
+Num batches: 55
+Num batches: 56
+Num batches: 57
+Num batches: 58
+Num batches: 59
+Num batches: 60
+Num batches: 61
+Num batches: 62
+Num batches: 63
+Num batches: 64
+Num batches: 65
+Num batches: 66
+Num batches: 67
+Num batches: 68
+Num batches: 69
+Num batches: 70
+Num batches: 71
+Num batches: 72
+Num batches: 73
+Num batches: 74
+Num batches: 75
+Num batches: 76
+Num batches: 77
+Num batches: 78
+Num batches: 79
+Num batches: 80
+Num batches: 81
+Num batches: 82
+Num batches: 83
+Num batches: 84
+Num batches: 85
+Num batches: 86
+Num batches: 87
+Num batches: 88
+Num batches: 89
+Num batches: 90
+Num batches: 91
+Num batches: 92
+Num batches: 93
+Num batches: 94
+Num batches: 95
+Num batches: 96
+Num batches: 97
+Num batches: 98
+Num batches: 99
+Num batches: 100
+Num batches: 101
+Num batches: 102
+*****loading pretrained model*****
+CFG:  {'act_base_eps': 0.4, 'act_device': 'cuda:1', 'act_eps_alpha': 7.0, 'actor_sync_freq': 10, 'batchsize': 128, 'burn_in_frames': 2500, 'epoch_len': 1000, 'eps': 1e-09, 'eta': 0.9, 'eval_bomb': 0, 'eval_epochs': 1, 'eval_log_betas': '1,2,3,5,7,10', 'gamma': 0.99, 'grad_clip': 50, 'hand_size': 5, 'load_model': '', 'log_beta_range': '0.5,10', 'lr': 0.0001, 'max_len': 80, 'method': 'vdn', 'multi_step': 3, 'num_epoch': 5000, 'num_eps': 80, 'num_game_per_thread': 80, 'num_lstm_layer': 2, 'num_player': 2, 'num_thread': 15, 'num_update_between_sync': 2500, 'obs_n_most_recent_own_cards': 0, 'pred_weight': 0, 'prefetch': 3, 'priority_exponent': 0.6, 'priority_weight': 0.4, 'q_variant': 'doubleq', 'replay_buffer_size': 5000, 'rnn_hid_dim': 512, 'sad': 1, 'save_dir': 'exps/exp1', 'seed': 9, 'shuffle_color': 1, 'shuffle_obs': 0, 'train_bomb': 0, 'train_device': 'cuda', 'use_softmax_policy': 0}
+*****done*****
