@@ -171,10 +171,6 @@ class DecoderLayer(nn.Module):
             x = x + self.dropout_3(self.ff(x2))
             return x
 
-# We can then build a convenient cloning function that can generate multiple layers:
-#def get_clones(module, N):
-#    return nn.ModuleList([copy.deepcopy(module) for i in range(N)])
-
 class Encoder(nn.Module):
     def __init__(self, vocab_size, d_model, N, heads, dropout = 0.1):
         super().__init__()
@@ -183,7 +179,6 @@ class Encoder(nn.Module):
         self.embed = Embedder(vocab_size, d_model//2)
         self.features_to_latent_turns = nn.Linear(15*d_model//2, d_model)
         self.fully_conn_on_raw = nn.Linear(838, d_model)
-        # self.latent_turns_to_turns = nn.Linear(4*d_model, d_model)
 
         self.pe = PositionalEncoder(d_model)
         self.layers = nn.ModuleList([EncoderLayer(d_model, heads) for _ in range(N)])
@@ -192,9 +187,6 @@ class Encoder(nn.Module):
     def forward(self, src, v0, mask):
         x_state_feat = self.embed(src)
         x = self.dropout(self.features_to_latent_turns(x_state_feat.reshape(-1, 80, 15*self.d_model//2)).reshape(-1, 80, self.d_model))
-
-        # x = self.dropout(self.fully_conn_on_raw(src))
-
         x = self.norm(x)
         x = self.pe(x)
 
