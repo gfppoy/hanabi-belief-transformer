@@ -236,7 +236,6 @@ if __name__ == "__main__":
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     torch.backends.cudnn.benchmark = True
     args = parse_args()
-    args.load_model = "models/sad/sad_2p_6.pthw"
 
     if not os.path.exists(args.save_dir):
         os.makedirs(args.save_dir)
@@ -306,7 +305,6 @@ if __name__ == "__main__":
 
             if batch_idx % 2 == 0:
                 obses *= 0
-                # cks *= 0
                 targets *= 0
                 while len(os.listdir('multi_replays/')) < 8:
                     print("Waiting for more samples...")
@@ -342,8 +340,6 @@ if __name__ == "__main__":
 
             stopwatch.time("sync and updating")
 
-            # batch, weight = replay_buffer.sample(args.batchsize, args.train_device)
-
             if args.belief_type == "public":
                 obs = batch.obs["priv_s"][:, :, -feature_size:] if args.num_player < 5 else batch.obs["priv_s"][:, :, 0, -feature_size:]
                 obs = torch.cat([obs, batch.action["a"].unsqueeze(-2).repeat(1, 1, args.num_player, 1).float()], -1)
@@ -374,8 +370,7 @@ if __name__ == "__main__":
                     running_losses[j].append(loss_avgs[j])
                     # running_tests[j].append(loss_test_avgs[j])
                 if 0.2*sum(loss_avgs) < best_model_score:
-                    # torch.save(model[j].state_dict(),"/pyhanabi/saves_while_training/model"+str(j)+"_2player_belief_online.pth")
-                    torch.save(model.state_dict(),"/pyhanabi/saves_while_training/model$_multi6op_odds_bothplayers.pth")
+                    torch.save(model.state_dict(),"/pyhanabi/saves_while_training/model$_multi6.pth")
                     best_model_score = 0.2*sum(loss_avgs)
 
                 total_losses = np.zeros(5)
@@ -383,7 +378,7 @@ if __name__ == "__main__":
                 temp = time.time()
 
             if (batch_idx + 1) % (save_loss_every) == 0:
-                np.save(os.path.join('saves_while_training', 'train_multi6eop_odds_bothplayers.npy'), np.array(running_losses))
+                np.save(os.path.join('saves_while_training', 'train_multi6.npy'), np.array(running_losses))
 
         stopwatch.summary()
 
